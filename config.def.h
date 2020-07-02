@@ -11,20 +11,22 @@ static const char *fonts[] = {
 	"monospace:size=10"
 };
 
-static const char selBg[] = "#458588";
-static const char selFg[] = "#ebdbb2";
-static const char selHl[] = "#fabd2f";
-static const char bg[] = "#32302f";
-static const char fg[] = "#ebdbb2";//"#a89984";
-static const char hl[] = "#fabd2f";
+static const char background[]      = "#32302f";
+static const char foreground[]      = "#ebdbb2";//"#a89984";
+static const char selbackground[]   = "#458588";
+static const char selforeground[]   = "#ebdbb2";
+static const char hlforeground[]    = "#fabd2f";
+static const char hlbackground[]    = "#32302f";
+static const char hlselbackground[] = "#458588";
+static const char hlselforeground[] = "#fabd2f";
 
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { fg, bg },
-	[SchemeNormHighlight] = { hl, bg },
-	[SchemeSel] = { selFg, selBg },
-	[SchemeSelHighlight] = { selHl, selBg },
+	[SchemeNorm] = { foreground, background },
+	[SchemeNormHighlight] = { hlforeground, hlbackground },
+	[SchemeSel] = { selforeground, selbackground },
+	[SchemeSelHighlight] = { hlselforeground, hlselbackground },
 	[SchemeOut] = { "#32302f", "#8ec07c" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
